@@ -68,6 +68,7 @@ RUN ARCH=$(uname -m); \
     tar -C "${GO_HOME}" -xzf "go${GO_VERSION}.${kernelname}-${goarch}.tar.gz" && \
     rm "go${GO_VERSION}.${kernelname}-${goarch}.tar.gz"
 
+    libclang-dev
 # aarch64 requires this name -- link for all
 RUN if [ ! -f "/usr/bin/$(uname -m)-linux-musl-gcc" ]; then ln -s /usr/bin/musl-gcc "/usr/bin/$(uname -m)-linux-musl-gcc"; fi
 

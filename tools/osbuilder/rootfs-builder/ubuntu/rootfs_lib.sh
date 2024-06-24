@@ -22,6 +22,7 @@ bootstrap=Ubuntu
 [Ubuntu]
 source=$REPO_URL
 keyring=ubuntu-keyring
+components=main restricted universe multiverse
 suite=$UBUNTU_CODENAME
 packages=$PACKAGES $EXTRA_PKGS
 EOF
