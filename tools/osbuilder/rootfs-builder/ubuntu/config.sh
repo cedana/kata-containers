@@ -6,7 +6,7 @@ source /etc/os-release
 OS_NAME=ubuntu
 # This should be Ubuntu's code name, e.g. "focal" (Focal Fossa) for 20.04
 OS_VERSION=${OS_VERSION:-${UBUNTU_CODENAME}}
-PACKAGES="chrony iptables dbus libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler protobuf-compiler python3-protobuf pkg-config libnet1-dev build-essential libnl-3-dev libcap-dev"
+PACKAGES="chrony iptables dbus libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler protobuf-compiler python3-protobuf pkg-config libnet1-dev build-essential libnl-3-dev libcap-dev libgpgme-dev libseccomp-dev libbtrfs-dev"
 [ "$AGENT_INIT" = no ] && PACKAGES+=" init"
 [ "$MEASURED_ROOTFS" = yes ] && PACKAGES+=" cryptsetup-bin e2fsprogs"
 [ "$SECCOMP" = yes ] && PACKAGES+=" libseccomp2"
